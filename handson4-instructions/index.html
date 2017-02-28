@@ -1,0 +1,190 @@
+<html> 
+<head>
+    <title>WDD | Hands-on 4</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/images/logo.png" /></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Hands-on 4</div>
+				<!-- DUE DATE -->
+				<div id="header-due">February 23rd</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">CSS Centering</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tools: Google Chrome, Internet, & a text editor</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">Everyone likes food, right?  Today we will be making a page for your favorite food!</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Assignment</div>
+				<!-- CONTENT -->
+				
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for assets/images -->
+				<p>
+					Through this hands-on, you will learn to center a div directly in the middle of your page, both horizontally and vertically. You will also learn how to import fonts from Google.
+				</p>
+				<p>
+					In your table groups, you'll be creating a webpage for any of your favorite foods, restaurants, cafes, or coffee shops. Using the wireframe and requirements below, create a webpage for your food or food place. When you're finished or time is up, post a screenshot of your site on <a href="https://piazza.com/class/iy3e8s6qu5a26f?cid=41">Piazza</a> with the pin #handson4!
+				</p>
+				<p>At the end of this hands-on, you should have something like this:</p>
+				<img src="assets/images/final.png">
+				<br>
+				<br>
+				<div class = "body-header">Wireframe and Requirements</div>
+				<p>
+					Follow the wireframe below to create your webpage.
+					<img src="assets/images/wireframe.png">
+				</p>
+				<p>
+					<b>Your webpage must include the following elements, and they must <em>all </em>  be centered:</b>
+				</p>
+				<div>
+					<ul>- Background image</ul>
+					<ul>- Header (name of food or food place or a creative title!)</ul>
+					<ul>- Subheader (description of food or other text)</ul>
+					<ul>- Input box (could be a form for subscribing to an email list, coupon code, or anything you want!)</ul>
+					<ul>- 3 social media icons (select from the "icons" folder in this instructions zip file or download icons for free from <a href="https://www.iconfinder.com/social-media-icons?price=free&page=2">Iconfinder</a>)</ul>
+				</div>
+
+				<p>
+					<b>Use the following HTML tags:</b>
+					<ul>div, img, button, input, link</ul>
+				</p>
+				<p>
+					<b>Use the following CSS styles for the elements on your page:</b>
+					<ul><em>Images:</em>  height, width</ul>
+					<ul><em>Text:</em>  color, font-size, font-family, font-weight</ul>
+					<ul><em>Centering containers:</em>  display, margin, position, top, transform:translateY, text-align, background-color, color</ul>
+					<ul><em>Input boxes and buttons:</em>  border, border-radius, height, width, margin, padding, color, background-color (plus check out <a href="https://www.w3schools.com/css/css3_buttons.asp">this site</a> for more ideas to style your button)</ul>
+					<ul><em>Icons:</em>  height, margin, padding</ul>
+				</p>
+
+				<p>
+					<b>*Tip:</b> Remember to keep your divs organized and be mindful of which divs are being placed inside another div (a.k.a. child and parent elements). Think of each element as a box! Lastly, don't forget to use ids and classes! 
+				</p>
+
+
+				
+				<br>
+				<div class = "body-header">Changing the Font</div>
+				<p>This default font just doesn't cut it.  Pick and import your own font from <a href="https://www.google.com/fonts/">Google's expansive font library</a>!
+				</p>
+				<ol>
+					<li>Browse through the fonts or search for a font you like using the search bar or category checkboxes on the right side of the page.  (We used Open Sans and Playfair Display.)</li>
+					<li>Click on the red circular plus "+" icon in the upper right corner of the font.</li>
+					<li>Click on the pop-up on the bottom of the page that says "_ Families Selected". Click on the "Customize" tab and select the font-weights you wish to use.  You may select as many fonts and font-weights as you would like to use, but note that more fonts and font-weights make your page load <em>slower</em>. For the purpose of this handson, <b>select two to three font-weights</b>.</li>
+					<li>Copy and paste the provided HTML code in the "Embed" tab into the head tag of your index.html and the provided CSS code into the appropriate selector of your CSS page (Hint: applying font-family to the body of your CSS file will make <em>all</em> of your text that font).</li>
+				</ol>
+				<p>Now your font is properly linked to your HTML and is styled in your CSS! Yes, it's that easy. Thanks, Google.</p>
+				
+				<div class = "body-header">Hints</div>
+				<p>Here's some hints incase you get stuck! Hover over the boxes to reveal each hint.
+				</p>
+				<div class="hint">
+					How should I organize the divs in my webpage?
+					<div id="hint1">
+						<div>
+							Since we need to have all elements centered (header, subheader, input box, button, social media icons), it is convenient to place them all in the <em>same container</em>. Then each element can have its own div and id, so that you can style them separately. Below is a diagram that outlines the way we organized our code in the example at the top of this hands-on instructions page. Each line represents a new div and indents represent divs inside other divs (parent and child).
+						</div>
+						<code>
+							<div class="code-indent">body</div>
+								<div class="code-indent2">container</div>
+								<div class="code-indent3">header</div>
+								<div class="code-indent3">subheader</div>
+								<div class="code-indent3">input box</div>
+								<div class="code-indent3">buttons</div>
+								<div class="code-indent3">social media icons</div>
+						</code>
+						<div> Note: there are many ways to organize your code! This is just one example.</div>
+					</div>
+				</div>
+				<div class="hint">
+					How do I fill the entire window with my background image using CSS?
+					<div id="hint2">
+						You'll need to add the following to your <em>body:</em>
+						<div>
+							<code>
+								<b>body {</b>
+									<div class="code-indent"><b>width: 100%;</b> (to fill the <em>entire</em> width of the window)</div>
+									<div class="code-indent"><b>margin: 0;</b> (to make the image touch the edge of the window)</div>
+									<div class="code-indent"><b>height: ___px;</b> (defines height so that we are able to vertically center our text)</div>
+									<div class="code-indent"><b>overflow: hidden;</b> (fits image to window size so that text always appears centered)</div>
+								<b>}</b>
+							</code>
+						</div>
+						And the following to your <em>image</em> in CSS:
+						<div>
+							<code>
+								<b>image id or class {</b>
+									<div class="code-indent"><b>width: 100%;</b></div>
+									<div class="code-indent"><b>position: fixed;</b>(don't worry about what this means just yet. More positioning to come next week!)</div>
+								<b>}</b> 
+							</code>
+						</div>
+					</div>
+				</div>
+				<div class="hint">
+					How do I center my text container horizontally?
+					<div id="hint3">
+						<code>
+							<div><b>container class or id {</b></div>
+								<div class="code-indent"><b>display: block;</b> (only block elements can use margin: 0 auto)</div>
+								<div class="code-indent"><b>margin: 0 auto;</b></div>
+							<b>}</b>						
+						</code>
+					</div>
+				</div>
+				<div class="hint">
+					How do I center my text container vertically?
+					<div id="hint4">
+						<code>
+							<div><b>container class or id {</b></div>
+								<div class="code-indent"><b>position: relative;</b> (more about position to come next class!)</div>
+								<div class="code-indent"><b>top: 50%;</b> (pushes container down 50% of window height from top of page)</div>
+								<div class="code-indent"><b>transform: translateY(-50%);</b> (pushes container up 50% of container height from bottom of page)</div>
+							<b>}</b>						
+						</code>
+					</div>
+				</div>
+				<div class="hint">
+					How do I give my background image a dark overlay to make my light text more legible?
+					<div id="hint5">
+						<div>
+							Add a div to your HTML with the id "background-overlay". Apply the following styles to your CSS:
+						</div>
+						<code>
+							<div><b>#background-overlay {</b></div>
+								<div class="code-indent"><b>background color: black;</b> (puts a black block over the image)</div>
+								<div class="code-indent"><b>opacity: 0.4;</b> (makes overlay more transparent...try various opacities from 0.0-1.0)</div>
+								<div class="code-indent"><b>height: 100%;</b></div>
+								<div class="code-indent"><b>width: 100%;</b></div>
+								<div class="code-indent"><b>position: fixed;</b> (more about position later!)</div>
+							<b>}</b>						
+						</code>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
