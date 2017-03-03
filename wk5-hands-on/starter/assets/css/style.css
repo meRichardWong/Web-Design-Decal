@@ -1,0 +1,27 @@
+body {
+	font-family: Lato;
+	color: #222;
+	margin: 0;
+}
+
+nav {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+#content-container {
+	max-width: 900px;
+	margin: 0 auto
+}
+
+#featured-img {
+	display: block;
+	width: 600px;
+	margin: 0 auto;
+}
+
+.menu::after { /* Clearfix */
+	clear: both;
+}
+
+/* Your code here */

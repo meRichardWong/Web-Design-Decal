@@ -1,0 +1,108 @@
+<html> 
+<head>
+    <title>WDD | Hands-on 5</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/images/logo.png" /></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Hands-on 5</div>
+				<!-- DUE DATE -->
+				<div id="header-due">March 4th</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">Positioning and Z-index</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tools: Google Chrome, Internet, & a text editor</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">Create a simple navigation menu and dropdown menu with positioning!</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Assignment</div>
+				<!-- CONTENT -->
+				
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for assets/images -->
+				<p>Through this handson, you will learn important positioning properties.  You will be using all four positioning types: <em>fixed</em>,&nbsp<em>absolute</em>,&nbsp<em>relative</em>, and&nbsp<em>static</em>.  You will also learn how to use z-index.</p>
+				<p>Right now, you should have something like this:</p>
+				<img src="assets/images/starter.png">
+				<br>
+				<br>
+				<div class = "body-header">Step 1: Align the Menu Items</div>
+				<p>Align the links of the navigation bar so that each link is side by side.  First, we must move the unordered list to left.  In the <em>menu</em> class:
+				<ul>
+					<li>set <em>float: 'right'</em>
+				</ul>
+				Next, let's align the links side by side. In the <em>menu-item</em> class:
+				<ul>
+					<li>set <em>float: 'left'</em>
+				</ul>
+				</p>
+				
+				<div class = "body-header">Step 2: Remove Default List Styling</div>
+				<p>Since we are using an unordered list as our navigation bar, we need to remove the default browser styling of unordered lists on our <em>menu</em> class and <em>sub-menu</em> class. To do this, add:
+				<ul>
+				<li><em>margin: '0'</em>
+				</li>
+				<li><em>padding: '0'</em>
+				</li>
+				<li><em>list-stlye-type: 'none'</em>
+				</li>
+				</ul>
+				To both <em>.menu</em> and <em>.sub-menu</em>.
+				</p>
+				<div class = "body-header">Step 3: Position the Dropdown Menu</div>
+				<p>Currently the sub menu items are distorting the top level item above it making it take up more space than we want. Changing the positioning will allow us to take the drop down menu out of the computed size of the top level item. Set:
+				<ul>
+				<li><em>position: 'absolute'</em>&nbsp to .sub-menu
+				</li>
+				</ul> 
+				</p>
+				<div class = "body-header">Step 4: Add Color to the Navigation Bar</div>
+				<p>Right now, the navigation bar is plain and can't be distiguished from the rest of the page.  Fix that by adding a background color.
+				<ul>
+					<li><em>background-color: 'rgba(0,0,0,0.8)'</em>&nbsp to .top-bar and .sub-menu</li>
+					<li><em>width: '100%'</em>&nbsp to .top-bar</li>
+				</ul>
+				</p>
+				<div class = "body-header">Step 5: Hide and Show Dropdown on Hover</div>
+				<p>The drop down menu currently is always showing; however, we want to show the drop down menu only when we hover over the top level item. First, hide the drop down menu:
+				<ul>
+					<li><em>visibility: 'hidden'</em>&nbsp to .sub-menu</li>
+				</ul>
+				Now, have it reappear when we hover:
+				<ul>
+					<li><em>visibility: 'visibile'</em>&nbsp to '.menu-item:hover .sub-menu'</li>
+				</ul>
+				</p>
+				<div class = "body-header">Step 5: Fixed Navigation Bar</div>
+				<p>Now if you scroll the navigation bar has position static so it will move as you scroll. Let's have it stay at the top no matter where you scroll to. To do this, add:
+				<ul>
+					<li><em>position: 'fixed'</em>&nbsp to .top-bar</li>
+				</ul>
+				</p>
+				<div class = "body-header">Finishing Thoughts</div>
+				<p>Your page should now look like this!</p>
+				<img src="assets/images/finish.png"
+			</div>
+		</div>
+	</div>
+</body>
+</html>
