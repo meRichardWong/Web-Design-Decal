@@ -24,4 +24,18 @@ nav {
 	clear: both;
 }
 
+menu {
+	float: right;
+}
+
+.menu-item {
+	float: left;
+}
+
+.menu.sub-menu {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
 /* Your code here */
