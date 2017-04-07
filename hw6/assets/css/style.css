@@ -1,0 +1,29 @@
+#container {
+  max-width: 960px;
+  margin: 15px auto;
+  text-align: center;
+  font-family: 'Lato';
+  font-weight: 300;
+}
+
+#name {
+  font-size: 2em;
+}
+
+a {
+  font-size: 0.8em;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: white;
+  background: #37474F;
+  padding: 10px 20px;
+  margin: 15px auto;
+  text-align:center;
+  display: inline-block;
+}
+
+img {
+  display: block;
+  max-width: 90%;
+  margin: auto;
+}

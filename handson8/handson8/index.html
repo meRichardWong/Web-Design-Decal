@@ -1,0 +1,211 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    	<title>WDD Hands-on 8</title>
+    	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/img/logo.png"></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Hands-on 8</div>
+				<!-- DUE DATE -->
+				<div id="header-due">March 23rd</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">Dress Drizzy</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tool: Text Editor and Google Chrome Web Inspector</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">In today's lecture, you were introduced to Javascript and learned some basics in jQuery. In this hands-on, you will use your new skills in jQuery to create an interactive dress up site for Drake.</div>
+				</div>
+			</div>
+			<div class="body">
+
+				<div class="body-header">Assignment</div>
+				<!-- CONTENT -->
+
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for images 
+				<script src="assets/script/script.js"></script>-->
+
+				<p class="caption">We have provided you with the backbone for Dress Drizzy. You can download the assignment file here:</p>
+				<a href="assets/drizzy.zip"><div class="download">Download File</div></a>
+				<p class="caption">You will be writing the script.js file from scratch in this assignment. Remember to save it in the "js" folder in your workspace.</p>
+
+						<div class="body-header">Part 1: Understanding the HTML</div>
+						<p>Take a second to watch the video of the final effect! (Excuse the background noise)</p>
+						<video width="660" controls>
+  							<source src="assets/img/DressDrizzy.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<p>Take a look at the structure in the HTML file. (Don't worry about everything inside the last script tag for now.) Also, notice how all the outfits are stacked on top of drake right now.</p>
+						<img src="assets/img/1.png">
+						<p>We need to hide all the outfits and selectively pick which ones to show based on what the user clicks. Add "display: none;" into the .outfit class to hide all outfits: </p>
+						<div class="code">
+							<div class="code-content">
+								<div>.outfit {</div>
+								<div class="indent">z-index: 10;</div>
+								<div class="indent">position: absolute;</div>
+								<div class="indent">display: none;</div>
+								<div>}</div>
+							</div>
+						</div>
+						<p></p>
+						<div class="body-header">Part 2: Dress Drizzy</div>
+						<p>Now, we need to move onto dressing Drake. Start a new script file, title it "script.js" and save it in the "js" folder in your workspace. Link your new JS file in your HTML. Add the line AFTER the line importing the JQuery library.</p>
+						<div class="code">
+							<div class="code-content">
+								<div>&lt;script src=&quot;assets/script/script.js&quot;&gt;&lt;/script&gt;</div>
+							</div>
+						</div>
+						<p>There are <b>two</b> ways to implement the same functionality. One solution is shorter and more elegant than the other, but you can implement Dress Drizzy in whatever way makes sense to you.</p>
+						<p>The <b>first</b> solution is to show the corresponding outfit for every outfit selection. Pay attention to the ids in the HTML. For example, if the user were to click on element "#s1", we would want to show "#o1". Repeat the same steps for "#s2" through "#s5" and "#o2" through "#o5". Afterwards use ".fadeIn()" and ".fadeOut()" to add functionality to the "STRIP ME" button.</p>
+						<p>The <b>second</b> solution is a bit trickier to understand but shortens your code significantly. The idea in this solution is to notice that "s1" and "o1" are correlated, "s2" and "o2" are correlated and so on. So what if there was a way to get the number of the outfit selected and display the corresponding outfit on Drake? Lucky for you, there is a way to do this. (Hint: remember the keyword "this" and look up the documentation for the "slice()" function in JQuery. Use these in order to obtain the number from "outfit-selection".) Once you have the number from the selected outfit, concatenate the string "o" and your number to get the correlated outfit to display.</p>
+						<p>Afterwards use ".fadeIn()" and ".fadeOut()" to add functionality to the "STRIP ME" button.</p>
+					
+					<div class="body-header">Solutions</div>
+						<p><b>Setting Up Your .js File</b></p>
+						<p>Create a new js file in the assets/js folder. Call it "script.js". Then insert the following code in your js to set up your file:</p>
+						<div class="code">
+							<div class="code-content">
+								<div>$(document).ready(function(){</div>
+								<div>});</div>
+							</div>
+						</div>
+						<p>Now your js document is ready to run!</p>
+
+						<p><b>Method 1</b></p>
+						<p>
+							Logic: When I click on a specific outfit-selection box, it will <b>show</b> the corresponding outfit and <b>hide</b> all the others. If I click "#s1", show "#o1", and hide "#o2", "#o3", "#o4", "#o5", and the "#body". Repeat the same for all outfits.
+						</p>
+						<p>
+							Let's start by setting up our click event. Hover below:	
+						</p>
+						<div class="code">
+							<div class="code-content-hide">
+								<div>$("").click(function(){</div>
+								<div>});</div>
+							</div>
+						</div>
+						<p>
+							What goes in the quotes? The element that you want to click on to make something happen (to make the function run). Let's click on "#s1" and show the corresponding outfit "#o1". Hover below:
+						</p>
+						<div class="code">
+							<div class="code-content-hide">
+								<div>$("#s1").click(function(){</div>
+								<div class="indent">$("#o1").show();</div>
+								<div>});</div>
+							</div>
+						</div>
+						<p>
+							Now we have to hide all the other outfits and Drake's body! Hover below:
+						</p>
+						<div class="code">
+							<div class="code-content-hide">
+								<div>$("#s1").click(function(){</div>
+								<div class="indent">$("#o1").show();</div>
+								<div class="indent">$("#o2").hide();</div>
+								<div class="indent">$("#o3").hide();</div>
+								<div class="indent">$("#o4").hide();</div>
+								<div class="indent">$("#o5").hide();</div>
+								<div class="indent">$("#body").hide();</div>								
+								<div>});</div>
+							</div>
+						</div>
+						<p>
+							Repeat the same click event for all outfit-selections and outfits.
+						</p>
+
+						<p><b>Method 2</b></p>
+						<p>
+							Just like Method 1, let's set up our click event.
+						</p>
+						<div class="code">
+							<div class="code-content-hide">
+								<div>$("").click(function(){</div>
+								<div>});</div>
+							</div>
+						</div>
+						<p>
+							What goes inside the quotes? When we click on any of the outfit-selection boxes, we want the other outfits and Drake's body to fadeOut. Hover below:
+						</p>
+						<div class="code">
+							<div class="code-content-hide">
+								<div>$(".outfit-selection").click(function(){</div>
+								<div class="indent">$(".outfit").fadeOut();</div>
+								<div class="indent">$("#body").fadeOut();</div>
+								<div>});</div>
+							</div>
+						</div>
+						<p>
+							However, running this code seems to do nothing when we click on any of the outfit-selection boxes! This is because our function is not specific enough. Which outfit-selection will correspond to which outfit? We can accomplish this in jQuery using variables, "this", attr(), and slice(). Notice that there is a relationship between the ids for outfit-selections and outfits. When we click on "#s1", we want to only show outfit "#o1". How can we assign a value to a variable equal to the number in the id? Use "this", <a href="http://api.jquery.com/attr/">.attr()</a> and <a href="https://api.jquery.com/slice/">.slice()</a>.
+						</p>
+						<div class="code">
+							<div class="code-content-hide">
+								<div>$(".outfit-selection").click(function(){</div>
+								<div class="indent">$(".outfit").fadeOut();</div>
+								<div class="indent">$("#body").fadeOut();</div>							
+								<div class="indent">var num = $(this).attr("id").slice(1);</div>
+								<div>});</div>
+							</div>
+						</div>
+						<p>
+							Using .attr() allows us to take the "id" of <em>this</em> specific outfit-selection that you click on. Using .slice() allows us to construct a new jQuery object containing a subset of the elements specified by the start position, 1, and also corresponds to <em>this</em> specific outfit-selection. Great! Now, we can use the integer value, num, to add to the "#o" part of the id for outfits.
+						</p>
+						<div class="code">
+							<div class="code-content-hide">
+								<div>$(".outfit-selection").click(function(){</div>
+								<div class="indent">$(".outfit").fadeOut();</div>
+								<div class="indent">$("#body").fadeOut();</div>							
+								<div class="indent">var num = $(this).attr("id").slice(1);</div>
+								<div class="indent">var outfit = "#o" + num;</div>
+								<div>});</div>
+							</div>
+						</div>
+						<p>
+							Lastly, we need the outfit to fadeIn! We can call certain outfits using the variable, outfit, inside the parentheses of $().fadeIn. Note that we don't need a "" inside the parentheses because we just defined the variable outfit with the id.
+						</p>
+						<div class="code">
+							<div class="code-content-hide">
+								<div>$(".outfit-selection").click(function(){</div>
+								<div class="indent">$(".outfit").fadeOut();</div>
+								<div class="indent">$("#body").fadeOut();</div>							
+								<div class="indent">var num = $(this).attr("id").slice(1);</div>
+								<div class="indent">var outfit = "#o" + num;</div>
+								<div class="indent">$(outfit).fadeIn;</div>
+								<div>});</div>
+							</div>
+						</div>
+
+						<p><b>Activating the Strip Button</b></p>
+						<p>Logic: When we click on the strip-button, all outfits will fadeOut and Drake's body will fadeIn.</p>
+						<div class="code">
+							<div class="code-content-hide">
+								<div>$("#strip-button").click(function(){</div>
+								<div class="indent">$(".outfit").fadeOut();</div>
+								<div class="indent">$("#body").fadeIn();</div>							
+								<div>});</div>
+							</div>
+						</div>
+						<p>Woo! You've dressed (and undressed) Drizzy :D</p>
+			</div>
+		</div>
+	</div>
+
+</body></html>

@@ -1,0 +1,91 @@
+<html> 
+<head>
+    <title>WDD | Hands-on 10</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="images/logo.png" /></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Hands-on 10</div>
+				<!-- DUE DATE -->
+				<div id="header-due">April 6, 2017</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">Building a Lightbox</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tools: Google Chrome, Internet, & the Web Inspector</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">Lightboxes afford great <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">user control and freedom</a>.  They enable the user to quickly enlarge and close an image.  Learn how to build one with CSS and jQuery!</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Assignment</div>
+				<!-- CONTENT -->
+				
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for images -->
+				<p>This is what our lightbox will look like:</p>
+				<img src="images/final.gif" />
+				<br>
+				<p>The user should be able to close this image either by clicking the 'x' icon on the top right or by clicking anywhere outside the photo. </p>
+
+				<div class="body-header">Step 1: Enlarge the Image</div>
+				<p>First, let's make an image (any image) larger when you click on it.  We've already done a part of this for you.  Take a look at the 'style.css' file in the 'starter' folder and you will see a class called <b>.pic-click</b>.</p>
+				<img src="images/2.png" />
+				<br>
+				<br>
+				<p>If you open up the HTML file in your text editor, notice that the .pic-click class is not currently styling any of our HTML elements. According to the styles in our CSS for .pic-click, adding this class to any of the pictures will enlarge the photo so that it is fixed on top of the gallery of travel photos.</p>
+				<p>You can apply the <b>.pic-click</b> class to any other class using jQuery.  By using the <b>addClass</b> method, you can add the CSS propertes of the <b>.pic-click</b> class to another class.  In this case, we want to add the <b>.pic-click</b> class to elements of the <b>.picture</b> class once we click on a picture.</p>  
+				<p>However, we don't want to add <b>.pic-click</b> to the entire <b>.picture</b> class (as this will enlarge <em>all</em> of our images). We only want to add this class to the specific picture we click.  To do this, we must use the <b>$(this)</b> selector.</p>
+				<p>You should now have this in your script file:</p>
+				<img class="hint" src="images/3.png" />
+				<p><em>Note that there is no period in front of "pic-click" when we use the <b>addClass</b> function.</em></p>
+				<p>If you click on an image, it should look like this:</p>
+				<img src="images/4.png" />
+				<br>
+				<br>
+				<div class = "body-header">Step 2: Adding an Overlay</div>
+				<p>Right now there is no juxtaposition between the enlarged image and the rest of the page.  Fix this by adding an overlay over the rest of the page.</p>
+				<p> In your HTML file, <b>create an empty div inside your body tag</b> and give it an id <b>#overlay</b>. Add new styles for <b>#overlay</b> in the 'style.css' file.</p>
+				<img src="images/5.png" />
+				<br>
+				<p>
+				Great! You won't see <b>#overlay</b> show up in your browser right now because its display property is set to 'none'.  However, by reading the CSS you should see that this adds a black overlay across the entire window with opacity 0.75.
+				</p>
+				<p>We only want this overlay to appear once we click something of the <b>.picture</b> class.  How do we make this happen?  Well, let's head to our jQuery!</p>
+				<p>In your jQuery, 'show' the overlay once we click something of the <b>.picture</b> class.</p>
+				<img class="hint" src="images/6.png" />
+				<p>Once you do this, you should see an overlay appear over the window but under the picture once you click on a picture.  Note that the z-index of <b>.pic-click</b> is 21, while the z-index of <b>#overlay</b> is 20, which is why the image appears over the overlay.</p>
+				<br><br>
+				<div class = "body-header">Step 3: Closing the Image</div>
+				<p>Right now we can't close the image once we open it!  This is terrible user freedom and control!  What a heuristic violation!</p>
+				<p>We want to give our users two ways to close an image.  They can click the 'x' icon or click anywhere outside of the photo.  Let's first provide them with the 'x' icon.</p>
+				<p>We want this 'x' icon to appear once the overlay appears, so got to your HTML and inside your <b>#overlay</b> div, add the 'close.png' image we have provided in the starter folder and give it an id <b>#close</b>.  Your HTML should have the lines below somewhere in the body tag.</p>
+				<img class="hint" src="images/8.png" />
+				<p>Now we need to style the icon. Lucky for you, we already have some styling for the <b>#close</b> element in our 'style.css' file.  Now, if you click an image, you should see the 'x' icon appear in the top right corner with your overlay.</p>
+				<p>We're not done yet!  We still need to tell our jQuery to respond to our clicks.</p>
+				<p>In your script, add another click function so that when we click on the <b>#overlay</b>, the <b>.pic-click</b> class will be removed and the #overlay, or <b>this</b> overlay we're clicking on, will hide. Here's the ~magic code~.</p>
+				<img class="hint" src="images/7.png" />
+				<p>Take a moment to read this and think about what it does.  This code essentially says, "Whenever we click the <b>#overlay</b>, hide <b>$(this)</b>, which in this case is the overlay itself.  Then, remove the <b>.pic-click</b> class from all elements of the <b>.picture</b> class." (Remember, we added <b>.pic-click</b> to the picture class to enlarge the picture).</p>
+				<p>You're done!  If you have time, feel free to replace this with your own photos or style other elements of the page.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
