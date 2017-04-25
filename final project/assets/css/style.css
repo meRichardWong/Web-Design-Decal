@@ -1,0 +1,300 @@
+ 
+ ÛÛÛÛÛ   ÛÛÛÛÛ    ÛÛÛÛÛÛÛ    ÛÛÛÛÛÛ   ÛÛÛÛÛÛ ÛÛÛÛÛÛÛÛÛÛ
+°°ÛÛÛ   °°ÛÛÛ   ÛÛÛ°°°°°ÛÛÛ °°ÛÛÛÛÛÛ ÛÛÛÛÛÛ °°ÛÛÛ°°°°°Û
+ °ÛÛÛ    °ÛÛÛ  ÛÛÛ     °°ÛÛÛ °ÛÛÛ°ÛÛÛÛÛ°ÛÛÛ  °ÛÛÛ  Û ° 
+ °ÛÛÛÛÛÛÛÛÛÛÛ °ÛÛÛ      °ÛÛÛ °ÛÛÛ°°ÛÛÛ °ÛÛÛ  °ÛÛÛÛÛÛ   
+ °ÛÛÛ°°°°°ÛÛÛ °ÛÛÛ      °ÛÛÛ °ÛÛÛ °°°  °ÛÛÛ  °ÛÛÛ°°Û   
+ °ÛÛÛ    °ÛÛÛ °°ÛÛÛ     ÛÛÛ  °ÛÛÛ      °ÛÛÛ  °ÛÛÛ °   Û
+ ÛÛÛÛÛ   ÛÛÛÛÛ °°°ÛÛÛÛÛÛÛ°   ÛÛÛÛÛ     ÛÛÛÛÛ ÛÛÛÛÛÛÛÛÛÛ
+°°°°°   °°°°°    °°°°°°°    °°°°°     °°°°° °°°°°°°°°° */
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* TOP NAVIGATION BAR */
+.inner {
+	overflow: hidden;
+	width: 100%;
+	-webkit-box-shadow: 0 10px 5px #888888;
+  	-moz-box-shadow: 0 10px 5px #888888;
+  	box-shadow: 0 6px 7px #888888;
+  	margin-bottom: 10px;
+
+}
+
+
+/* TOP LEFT NAME */
+
+.name {
+	float:left;
+	margin-left: 20px;
+	font-family: 'Roboto';
+	font-size: 20px;
+	letter-spacing: 2.5px;
+
+}
+ 
+
+ /* LINKS ON THE RIGHT */
+
+.nav{
+	float:right;
+	position: relative;
+	top: 50px;
+	right: 4px;
+
+}
+
+ul {
+	text-decoration: none;
+	list-style-type: none;
+}
+a {
+	text-decoration:none;
+	padding: 5px;
+}
+
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.navbarlink {
+	display: inline;
+	text-decoration: none;
+	padding: 5px;
+	margin-right: 15px;
+	margin-top: 10px;
+	font-family: 'Roboto';
+}
+
+
+img {
+    box-shadow: -3px 3px 8px #888888;
+}
+
+
+
+
+/* CONTENT */
+
+.content {
+	height: 75%; 
+
+}
+
+
+.pictureContainer {
+	margin: 35px auto 0;
+	background-color: blue;
+	width: 90%;
+}
+
+.edward {
+	width: 60%;
+
+}
+
+.sidebar {
+	width: 20%;
+	height: 100%;
+
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+	position: relative;
+}
+
+
+.prev {
+	  vertical-align:middle;
+
+}
+
+.button {
+
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+	background-color:#f9f9f9;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:22px;
+	font-weight:bold;
+	padding:8px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+
+}
+
+.button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+	background-color:#e9e9e9;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.buttonPrev {
+	vertical-align: auto;
+}
+
+/* 
+   ÛÛÛÛÛÛÛÛÛ   ÛÛÛÛÛÛÛÛÛÛÛ   ÛÛÛÛÛÛÛÛÛÛÛ
+  ÛÛÛ°°°°°ÛÛÛ °°ÛÛÛ°°°°°ÛÛÛ °Û°°°ÛÛÛ°°°Û
+ °ÛÛÛ    °ÛÛÛ  °ÛÛÛ    °ÛÛÛ °   °ÛÛÛ  ° 
+ °ÛÛÛÛÛÛÛÛÛÛÛ  °ÛÛÛÛÛÛÛÛÛÛ      °ÛÛÛ    
+ °ÛÛÛ°°°°°ÛÛÛ  °ÛÛÛ°°°°°ÛÛÛ     °ÛÛÛ    
+ °ÛÛÛ    °ÛÛÛ  °ÛÛÛ    °ÛÛÛ     °ÛÛÛ    
+ ÛÛÛÛÛ   ÛÛÛÛÛ ÛÛÛÛÛ   ÛÛÛÛÛ    ÛÛÛÛÛ   
+°°°°°   °°°°° °°°°°   °°°°°    °°°°°      */
+
+.artContainer {
+	background-color: #ecf0f1;
+}
+
+
+
+.artSection {
+	margin: 1%;
+}
+
+
+.artspan{
+	margin: 0px 25px ;
+}
+
+.commissionedtest {
+	text-align: center;
+}
+
+
+.flowerspan {
+	margin: 0px 25px ;
+}
+
+.flowertest{
+	text-align: center;
+
+}
+
+
+
+
+
+
+.pixelspan {
+	margin: 0px 25px ;
+}
+
+.pixeltest{
+	text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+ ÛÛÛÛÛÛÛÛÛÛÛ  ÛÛÛÛÛ                ÛÛÛÛÛ            
+°°ÛÛÛ°°°°°ÛÛÛ°°ÛÛÛ                °°ÛÛÛ             
+ °ÛÛÛ    °ÛÛÛ °ÛÛÛÛÛÛÛ    ÛÛÛÛÛÛ  ÛÛÛÛÛÛÛ    ÛÛÛÛÛÛ 
+ °ÛÛÛÛÛÛÛÛÛÛ  °ÛÛÛ°°ÛÛÛ  ÛÛÛ°°ÛÛÛ°°°ÛÛÛ°    ÛÛÛ°°ÛÛÛ
+ °ÛÛÛ°°°°°°   °ÛÛÛ °ÛÛÛ °ÛÛÛ °ÛÛÛ  °ÛÛÛ    °ÛÛÛ °ÛÛÛ
+ °ÛÛÛ         °ÛÛÛ °ÛÛÛ °ÛÛÛ °ÛÛÛ  °ÛÛÛ ÛÛÛ°ÛÛÛ °ÛÛÛ
+ ÛÛÛÛÛ        ÛÛÛÛ ÛÛÛÛÛ°°ÛÛÛÛÛÛ   °°ÛÛÛÛÛ °°ÛÛÛÛÛÛ 
+°°°°°        °°°° °°°°°  °°°°°°     °°°°°   °°°°°°                                           
+
+*/
+
+.photographyContent{
+	background-color: #FAEBD7;
+
+}
+
+.photographyContainer {
+	height: 100%;
+}
+
+.painting {
+	width: 80%;
+	margin: 15px auto;
+	display: block;
+	border-radius: 3px;
+
+}
+
+.lesliebeach {
+	width: 76%;
+	margin: 15px auto;
+	display: block;
+	border-radius: 3px;
+
+}
+
+.richonswing {
+	width: 70%;
+	margin: 15px auto;
+	display: block;
+	border-radius: 3px;
+}
+.leslieglacier {
+	width: 70%;
+	margin: 15px auto;
+	display: block;
+	border-radius: 3px;
+}
+
+.swing {
+	width: 70%;
+	margin: 15px auto;
+	display: block;
+	border-radius: 3px;
+}
