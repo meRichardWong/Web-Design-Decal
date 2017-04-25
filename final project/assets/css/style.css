@@ -76,9 +76,24 @@ li a:hover {
 
 img {
     box-shadow: -3px 3px 8px #888888;
+    cursor:pointer;
+
 }
 
+.tester:after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
 
+.tester:hover:after {
+    opacity:1;
+}
 
 
 /* CONTENT */
@@ -232,16 +247,6 @@ img {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* 
  ÛÛÛÛÛÛÛÛÛÛÛ  ÛÛÛÛÛ                ÛÛÛÛÛ            
 °°ÛÛÛ°°°°°ÛÛÛ°°ÛÛÛ                °°ÛÛÛ             
@@ -280,20 +285,20 @@ img {
 }
 
 .richonswing {
-	width: 70%;
+	width: 77%;
 	margin: 15px auto;
 	display: block;
 	border-radius: 3px;
 }
 .leslieglacier {
-	width: 70%;
+	width: 75%;
 	margin: 15px auto;
 	display: block;
 	border-radius: 3px;
 }
 
 .swing {
-	width: 70%;
+	width: 74%;
 	margin: 15px auto;
 	display: block;
 	border-radius: 3px;
