@@ -194,6 +194,11 @@ img {
  ÛÛÛÛÛ   ÛÛÛÛÛ ÛÛÛÛÛ   ÛÛÛÛÛ    ÛÛÛÛÛ   
 °°°°°   °°°°° °°°°°   °°°°°    °°°°°      */
 
+
+.title {
+	margin: 20px 5px;
+}
+
 .artContainer {
 	background-color: #ecf0f1;
 }
@@ -206,16 +211,28 @@ img {
 
 
 .artspan{
-	margin: 0px 25px ;
+	margin: 0px 20px ;
 }
 
 .commissionedtest {
 	text-align: center;
+
 }
 
 
+.tester:hover{
+/*	-moz-box-shadow: 0 0 10px #ccc;
+		-webkit-box-shadow: 0 0 10px #ccc;
+		box-shadow: 0 0 10px #ccc;*/
+		border: 3px dotted black;
+
+}
+
+
+
+
 .flowerspan {
-	margin: 0px 25px ;
+	margin: 0px 20px ;
 }
 
 .flowertest{
@@ -225,11 +242,8 @@ img {
 
 
 
-
-
-
 .pixelspan {
-	margin: 0px 25px ;
+	margin: 0px 20px ;
 }
 
 .pixeltest{
